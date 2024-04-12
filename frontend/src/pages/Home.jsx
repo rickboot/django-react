@@ -10,7 +10,6 @@ function Home() {
 
   useEffect(() => {
     getNotes();
-    console.log(notes);
   }, []);
 
   const getNotes = () => {

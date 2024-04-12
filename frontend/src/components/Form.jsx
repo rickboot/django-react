@@ -22,11 +22,14 @@ function Form({ method, apiRoute }) {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
+
     try {
       const res = await api.post(apiRoute, { username, password });
       if (method === 'login') {
         localStorage.setItem(ACCESS_TOKEN, res.data.access);
         localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+        navigate('/');
+      } else {
         navigate('/login');
       }
     } catch (error) {
