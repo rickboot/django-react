@@ -151,6 +151,12 @@ npm run dev
 add .env to backend with db vars
 python manage.py migrate
 
+# add .gitignore with env/ .env db.sqlite3 and push to repo
+
+# add .choreo/endpoints.yaml in backend/
+
+# add Procfile in backend/
+
 ---
 
 # Todo
@@ -180,4 +186,5 @@ status 204 - deleted
 bugs:
 used post instead of delete... doh!
 did not add 'id' in NoteSerializer
+
 # django-react
